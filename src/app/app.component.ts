@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'databindingApp';
+
+  // String Interpolation
+  name: string = "hasan";
+
+  // Property Binding
+  isDisabled: boolean = true;
+
+  // Event Binding
+  public onInputChanged(e: Event) {
+    this.name = (<HTMLInputElement>e.target).value;
+    console.log(this.name);
+  }
 }
